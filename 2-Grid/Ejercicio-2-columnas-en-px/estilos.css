@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+.item {
+  display: grid;
+  place-items: center;
+  min-height: 70px;
+  background: #3b6cf6;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.rejilla {
+  overflow-x: auto; /* las columnas son de ancho fijo: en pantallas muy estrechas se desplaza la rejilla, no la página */
+  display: grid;
+  grid-template-columns: 100px 200px 100px;
+  gap: 10px;
+}

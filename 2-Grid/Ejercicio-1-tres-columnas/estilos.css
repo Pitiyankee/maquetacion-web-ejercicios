@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+.item {
+  display: grid;
+  place-items: center;
+  min-height: 70px;
+  background: #3b6cf6;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}

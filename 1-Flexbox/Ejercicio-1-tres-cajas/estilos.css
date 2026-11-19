@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.fila {
+  display: flex;
+  gap: 20px;
+}
+.caja {
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+  background: #3b6cf6;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 8px;
+}

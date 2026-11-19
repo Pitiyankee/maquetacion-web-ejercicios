@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* tres columnas iguales que pueden encoger */
+  gap: 1rem;
+}
+.tarjeta {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #d5dbe8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / .06);
+}
+.tarjeta h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.tarjeta p { margin: 0; color: #555; }

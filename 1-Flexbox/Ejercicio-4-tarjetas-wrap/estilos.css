@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap; /* permite saltar de línea */
+  gap: 1rem;
+}
+.tarjeta {
+  flex: 0 0 200px; /* no crece, no encoge, base 200px */
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #d5dbe8;
+  border-radius: 10px;
+}
+.tarjeta h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.tarjeta p { margin: 0; color: #555; }

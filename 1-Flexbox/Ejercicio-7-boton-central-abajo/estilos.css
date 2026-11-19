@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.botones {
+  display: flex;
+  flex-wrap: wrap; /* en móvil los botones pasan a otra línea en vez de salirse */
+  align-items: flex-start; /* los demás botones arriba, sin estirarse */
+  gap: .75rem;
+  height: 200px; /* altura para que se note la alineación */
+  padding: 1rem;
+  background: #eef1f8;
+  border-radius: 8px;
+}
+.boton {
+  padding: .6rem 1.2rem;
+  border: 0;
+  border-radius: 6px;
+  background: #3b6cf6;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+.boton--central {
+  align-self: flex-end; /* solo este botón baja al final del eje cruzado */
+  background: #e0457b;
+}

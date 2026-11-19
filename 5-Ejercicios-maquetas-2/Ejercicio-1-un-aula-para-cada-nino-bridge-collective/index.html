@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bridge Collective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="page">
+  <header class="header">
+    <a class="header__logo" href="#" aria-label="Bridge Collective, inicio">
+      <span class="header__dot" aria-hidden="true"></span>Bridge Collective
+    </a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M2 7h16M2 13h16"/>
+      </svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Principal" hidden>
+      <ul class="menu__list">
+        <li><a class="menu__link" href="#">Inicio</a></li>
+        <li><a class="menu__link" href="#impact">Impacto</a></li>
+        <li><a class="menu__link" href="#">Colaborar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1 class="hero__title">Un aula para cada<br>niño.</h1>
+      <p class="hero__text">Financiamos las escuelas, formamos a los docentes y medimos lo que funciona, para que cada niño al que llegamos hoy sea un graduado mañana.</p>
+    </section>
+
+    <section class="stats" id="impact" aria-label="Nuestro impacto">
+      <article class="stat">
+        <div class="stat__top">
+          <svg class="stat__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 3c1 7 6 12 13 13-7 1-12 6-13 13-1-7-6-12-13-13 7-1 12-6 13-13z" stroke-linejoin="round"/></svg>
+          <p class="stat__value">2,4M</p>
+        </div>
+        <h2 class="stat__label">Estudiantes alcanzados</h2>
+        <p class="stat__desc">En 31 países desde 2011.</p>
+      </article>
+      <article class="stat">
+        <div class="stat__top">
+          <svg class="stat__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 6v20M6 16h20"/></svg>
+          <p class="stat__value">1.284</p>
+        </div>
+        <h2 class="stat__label">Escuelas aliadas</h2>
+        <p class="stat__desc">En 14 países, de Kenia a Guatemala.</p>
+      </article>
+      <article class="stat">
+        <div class="stat__top">
+          <svg class="stat__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 16h20M17 7l9 9-9 9" stroke-linejoin="round"/></svg>
+          <p class="stat__value">38K</p>
+        </div>
+        <h2 class="stat__label">Docentes formados</h2>
+        <p class="stat__desc">Con herramientas y metodología modernas.</p>
+      </article>
+      <article class="stat">
+        <div class="stat__top">
+          <svg class="stat__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 21l8-8 5 5 10-10M19 8h8v8" stroke-linejoin="round"/></svg>
+          <p class="stat__value">3,1×</p>
+        </div>
+        <h2 class="stat__label">Mejora en graduación</h2>
+        <p class="stat__desc">Las escuelas aliadas superan 3 veces los promedios nacionales.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 Bridge Collective</p>
+    <p class="footer__text">Organización benéfica registrada 12345678</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

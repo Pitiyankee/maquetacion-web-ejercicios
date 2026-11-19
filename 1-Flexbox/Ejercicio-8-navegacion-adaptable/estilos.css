@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; }
+
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem 1rem; /* vertical | horizontal */
+  padding: 1rem;
+  background: #1f2937;
+}
+.barra__enlace {
+  flex: 1 1 110px; /* crecen y se reparten el ancho, mínimo 110px */
+  padding: .6rem 1rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background: #374151;
+  border-radius: 6px;
+}
+.barra__enlace:hover { background: #3b6cf6; }
+.nota { padding: 1rem; color: #555; }

@@ -1,0 +1,141 @@
+/* ===== Variables de tema (oscuro por defecto, como la captura) ===== */
+:root,
+:root[data-theme="dark"] {
+  --bg: #313e51;
+  --bg-deco: #2b3748;
+  --card: #3b4d66;
+  --text: #ffffff;
+  --muted: #abc1e1;
+  --accent: #a729f5;
+  --shadow: none;
+  --font: "Rubik", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f6fa;
+  --bg-deco: #e9edf5;
+  --card: #ffffff;
+  --text: #313e51;
+  --muted: #626c7f;
+  --shadow: 0 16px 40px rgba(143, 160, 193, 0.14);
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  transition: background-color .3s, color .3s;
+}
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* ===== Página con círculos decorativos ===== */
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 0 20%, var(--bg-deco) 0 280px, transparent 281px),
+    radial-gradient(circle at 100% 85%, var(--bg-deco) 0 300px, transparent 301px);
+}
+.page__header {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 72px; /* el interruptor queda en y≈110 como en la captura */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ===== Interruptor de tema ===== */
+.theme-switch { display: flex; align-items: center; gap: 16px; }
+.theme-switch__icon { color: var(--muted); }
+.theme-switch__btn {
+  position: relative;
+  width: 48px; height: 28px;
+  border: 0; border-radius: 999px;
+  background: var(--accent);
+  cursor: pointer;
+}
+.theme-switch__thumb {
+  position: absolute; top: 4px; left: 4px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform .25s;
+}
+.theme-switch__btn[aria-checked="true"] .theme-switch__thumb { transform: translateX(20px); }
+.theme-switch__btn:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+
+/* ===== Quiz ===== */
+.quiz {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 100px 0 64px; /* las opciones empiezan en y=224 */
+  display: grid;
+  grid-template-columns: 1fr 564px; /* opciones de 564px de ancho */
+  gap: 32px;
+  align-items: start;
+}
+.quiz__intro { padding-top: 0; }
+.quiz__title {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.05;
+}
+.quiz__title strong { display: block; font-weight: 500; }
+.quiz__subtitle {
+  margin: 48px 0 0;
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+/* ===== Opciones ===== */
+.options { display: grid; gap: 24px; }
+.option {
+  display: flex; align-items: center; gap: 32px;
+  padding: 17px; /* 17 + 3 de borde = 20 → opción de 96px de alto */
+  border: 3px solid transparent;
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .2s, transform .2s;
+}
+.option:hover { border-color: var(--accent); }
+.option:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.option__label { font-size: 1.75rem; font-weight: 500; }
+.option__icon {
+  display: grid; place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.option__icon--html { background: #fff1e9; color: #ff7e35; }
+.option__icon--css  { background: #e0fdef; color: #26d782; }
+.option__icon--js   { background: #ebf0ff; color: #306cff; }
+.option__icon--a11y { background: #f6e7ff; color: #a729f5; }
+
+/* ===== Móvil: se apila título y opciones ===== */
+@media (max-width: 800px) {
+  .page { padding: 16px; }
+  .page__header { padding-top: 8px; }
+  .quiz { grid-template-columns: 1fr; gap: 40px; padding-top: 16px; }
+  .option { padding: 9px; }
+  .quiz__intro { padding-top: 0; }
+  .quiz__title { font-size: 2.5rem; }
+  .quiz__subtitle { margin-top: 16px; font-size: 0.875rem; }
+  .options { gap: 12px; }
+  .option { gap: 16px; padding: 12px; border-radius: 12px; }
+  .option__label { font-size: 1.125rem; }
+  .option__icon { width: 40px; height: 40px; }
+  .option__icon svg { width: 24px; height: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

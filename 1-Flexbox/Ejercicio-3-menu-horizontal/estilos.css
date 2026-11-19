@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; }
+
+.menu {
+  display: flex;
+  justify-content: space-around; /* mismo espacio alrededor de cada enlace */
+  padding: 1rem;
+  background: #1f2937;
+}
+.menu__enlace {
+  color: #fff;
+  text-decoration: none;
+  padding: .4rem .8rem;
+  border-radius: 6px;
+}
+.menu__enlace:hover { background: #374151; }

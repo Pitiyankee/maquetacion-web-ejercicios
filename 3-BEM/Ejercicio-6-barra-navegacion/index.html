@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ejercicio 6 · Barra de navegación</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <main class="pagina">
+    <section class="seccion">
+      <h1 class="seccion__titulo">Ejercicio 6 · Barra de navegación</h1>
+      <nav class="barra" aria-label="Navegación de ejemplo">
+        <span class="barra__marca">Mi web</span>
+        <button class="barra__boton" type="button" aria-expanded="false" aria-controls="barra-enlaces">Menú</button>
+        <ul class="barra__enlaces" id="barra-enlaces">
+          <li class="barra__item"><a class="barra__enlace barra__enlace--activo" href="#">Inicio</a></li>
+          <li class="barra__item"><a class="barra__enlace" href="#">Cursos</a></li>
+          <li class="barra__item"><a class="barra__enlace" href="#">Blog</a></li>
+          <li class="barra__item"><a class="barra__enlace" href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

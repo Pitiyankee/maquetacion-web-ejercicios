@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid · Ejercicio 8</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Ejercicio 8: la galería pasa a una sola columna en pantallas pequeñas -->
+  <p class="estado" id="estado" aria-live="polite"></p>
+  <main class="galeria">
+    <article class="tarjeta"><h2>Tarjeta 1</h2><p>Descripción breve de la tarjeta 1.</p></article>
+    <article class="tarjeta"><h2>Tarjeta 2</h2><p>Descripción breve de la tarjeta 2.</p></article>
+    <article class="tarjeta"><h2>Tarjeta 3</h2><p>Descripción breve de la tarjeta 3.</p></article>
+    <article class="tarjeta"><h2>Tarjeta 4</h2><p>Descripción breve de la tarjeta 4.</p></article>
+    <article class="tarjeta"><h2>Tarjeta 5</h2><p>Descripción breve de la tarjeta 5.</p></article>
+    <article class="tarjeta"><h2>Tarjeta 6</h2><p>Descripción breve de la tarjeta 6.</p></article>
+  </main>
+  <script>
+    // Muestra cuántas columnas está usando la rejilla en cada momento
+    const galeria = document.querySelector('.galeria');
+    const estado = document.getElementById('estado');
+    function actualizar() {
+      const columnas = getComputedStyle(galeria).gridTemplateColumns.split(' ').length;
+      estado.textContent = `Ancho de ventana: ${window.innerWidth}px · Columnas: ${columnas}`;
+    }
+    window.addEventListener('resize', actualizar);
+    actualizar();
+  </script>
+</body>
+</html>

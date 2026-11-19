@@ -1,0 +1,20 @@
+/* BEM es una forma de nombrar clases, no una funcionalidad de CSS. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background: #f3f6fa; color: #243047; }
+.pagina { max-width: 1050px; margin: auto; padding: 24px; }
+.seccion { margin-top: 22px; padding: 24px; background: white; border-radius: 12px; }
+.seccion__titulo { margin-top: 0; }
+.barra { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 14px 18px; background: #e9f1ff; border-radius: 10px; }
+.barra__marca { font-weight: bold; color: #172d52; }
+.barra__boton { display: none; padding: 6px 12px; border: 1px solid #225db8; border-radius: 6px; background: white; color: #225db8; font: inherit; cursor: pointer; }
+.barra__enlaces { display: flex; gap: 16px; margin: 0; padding: 0; list-style: none; }
+.barra__enlace { color: #225db8; text-decoration: none; }
+.barra__enlace:hover { text-decoration: underline; }
+.barra__enlace--activo { font-weight: bold; text-decoration: underline; }
+
+/* En móvil el menú se pliega y el botón lo despliega (lo controla js/main.js) */
+@media (max-width: 560px) {
+  .barra__boton { display: inline-block; }
+  .barra__enlaces { display: none; flex-direction: column; width: 100%; }
+  .barra__enlaces--abierto { display: flex; }
+}

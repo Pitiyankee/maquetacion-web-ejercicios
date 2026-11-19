@@ -1,0 +1,20 @@
+/* BEM es una forma de nombrar clases, no una funcionalidad de CSS. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background: #f3f6fa; color: #243047; }
+.pagina { max-width: 1050px; margin: auto; padding: 24px; }
+.seccion { margin-top: 22px; padding: 24px; background: white; border-radius: 12px; }
+.seccion__titulo { margin-top: 0; }
+.tarjetas { display: flex; gap: 20px; flex-wrap: wrap; }
+/* BLOQUE */
+.tarjeta { flex: 1 1 240px; border: 2px solid #d7e0eb; border-radius: 12px; padding: 20px; }
+/* ELEMENTOS */
+.tarjeta__titulo { margin: 0 0 8px; color: #172d52; }
+.tarjeta__texto { min-height: 48px; }
+.tarjeta__boton { display: inline-block; padding: 10px 16px; border-radius: 7px; background: #225db8; color: white; text-decoration: none; }
+/* MODIFICADOR DE UN ELEMENTO */
+.tarjeta__boton--secundario { background: #46566d; }
+/* MODIFICADOR DEL BLOQUE (ej. 1: colores nuevos, editando solo esta clase) */
+.tarjeta--destacada { border-color: #7c3aed; background: #f3ecff; }
+/* MODIFICADOR DEL BLOQUE (ej. 3) */
+.tarjeta--oferta { border-color: #e0457b; background: #fff0f5; }
+.tarjeta--oferta .tarjeta__titulo { color: #b3205a; }

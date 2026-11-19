@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postres</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="layout">
+    <main class="shop">
+      <h1 class="shop__title">Postres</h1>
+      <ul class="products" id="products"></ul>
+    </main>
+
+    <aside class="cart" aria-labelledby="cart-title">
+      <h2 class="cart__title" id="cart-title">Tu carrito (<span id="cart-count">0</span>)</h2>
+
+      <div class="cart__empty" id="cart-empty">
+        <svg class="cart__empty-img" width="128" height="128" viewBox="0 0 128 128" fill="none" aria-hidden="true">
+          <ellipse cx="60" cy="100" rx="40" ry="5" fill="#e8dcd8"/>
+          <path d="M24 70v22c0 6 16 10 36 10s36-4 36-10V70z" fill="#a78a83"/>
+          <ellipse cx="60" cy="70" rx="36" ry="12" fill="#c7aea6"/>
+          <path d="M60 70V58l28-10v22z" fill="#8c6e68"/>
+          <path d="M96 40l24-8v18l-24 8z" fill="#8c6e68"/>
+          <path d="M72 32l22-8 26 8-24 8z" fill="#c7aea6"/>
+        </svg>
+        <p class="cart__empty-text">Tus productos añadidos aparecerán aquí</p>
+      </div>
+
+      <div class="cart__filled" id="cart-filled" hidden>
+        <ul class="cart__list" id="cart-list"></ul>
+        <p class="cart__total"><span>Total del pedido</span><strong id="cart-total">$0.00</strong></p>
+        <p class="cart__neutral">
+          <svg width="20" height="20" viewBox="0 0 21 20" fill="none" aria-hidden="true"><path d="M8 18.75H6.125v-4.5L2.5 9.5l-.5-5L5.5 2l5 3 5-3 3.5 2.5-.5 5-3.625 4.75v4.5H12.5" stroke="#1ea575" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span>Esta es una entrega <strong>neutra en carbono</strong></span>
+        </p>
+        <button class="btn-confirm" id="confirm-btn" type="button">Confirmar pedido</button>
+      </div>
+    </aside>
+  </div>
+
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <div class="modal__body">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#1ea575" stroke-width="3"/><path d="m14 25 7 7 13-15" stroke="#1ea575" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2 class="modal__title" id="modal-title">Pedido confirmado</h2>
+      <p class="modal__sub">Esperamos que disfrutes tu comida</p>
+      <ul class="modal__list" id="modal-list"></ul>
+      <p class="cart__total"><span>Total del pedido</span><strong id="modal-total">$0.00</strong></p>
+      <button class="btn-confirm" id="new-order-btn" type="button">Empezar nuevo pedido</button>
+    </div>
+  </dialog>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.estado {
+  margin: 0 0 1rem;
+  padding: .5rem .8rem;
+  background: #eef1f8;
+  border-radius: 6px;
+  font-size: .9rem;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.tarjeta {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #d5dbe8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / .06);
+}
+.tarjeta h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.tarjeta p { margin: 0; color: #555; }
+
+@media (max-width: 600px) {
+  .galeria { grid-template-columns: 1fr; }
+}

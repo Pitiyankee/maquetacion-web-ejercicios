@@ -1,0 +1,10 @@
+/* BEM es una forma de nombrar clases, no una funcionalidad de CSS. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background: #f3f6fa; color: #243047; }
+.pagina { max-width: 1050px; margin: auto; padding: 24px; }
+.seccion { margin-top: 22px; padding: 24px; background: white; border-radius: 12px; }
+.seccion__titulo { margin-top: 0; }
+.perfil { display: flex; flex-direction: column; align-items: center; max-width: 320px; margin: auto; padding: 24px; text-align: center; border: 2px solid #d7e0eb; border-radius: 14px; }
+.perfil__imagen { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%; background: #225db8; color: white; font-size: 2rem; font-weight: bold; }
+.perfil__nombre { margin: 14px 0 4px; color: #172d52; }
+.perfil__descripcion { margin: 0; color: #46566d; }

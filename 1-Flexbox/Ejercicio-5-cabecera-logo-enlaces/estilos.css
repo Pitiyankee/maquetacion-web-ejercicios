@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; }
+
+.cabecera {
+  display: flex;
+  justify-content: space-between; /* logo a un extremo, enlaces al otro */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #d5dbe8;
+}
+.cabecera__logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3b6cf6;
+  text-decoration: none;
+}
+.cabecera__nav { display: flex; gap: 1.5rem; }
+.cabecera__nav a { color: #222; text-decoration: none; }
+.cabecera__nav a:hover { text-decoration: underline; }

@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.columnas { display: flex; gap: 1rem; }
+.col {
+  flex: 1;
+  min-width: 0;
+  background: #eef1f8;
+  border-radius: 8px;
+}
+.col--principal { flex: 2; background: #dbe5ff; }
+/* El relleno va en el contenido, no en la columna: así el reparto es exactamente 2:1 */
+.col > * { margin-inline: 1rem; }
+.col h2 { margin-block: 1rem .5rem; }
+.col p { margin-block: 0 1rem; }

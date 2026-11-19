@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2rem; font-family: system-ui, sans-serif; }
+
+.contenedor {
+  display: flex;
+  justify-content: center; /* eje principal: horizontal */
+  align-items: center;     /* eje secundario: vertical */
+  height: 400px;
+  background: #eef1f8;
+  border: 2px dashed #9aa5c4;
+}
+.tarjeta {
+  max-width: 280px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / .12);
+  text-align: center;
+}
+.tarjeta h1 { margin: 0 0 .5rem; font-size: 1.25rem; }
+.tarjeta p { margin: 0; color: #555; }
